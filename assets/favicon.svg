@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Residencia Valle de Flores">
+  <rect width="64" height="64" rx="14" fill="#2d6a4f"/>
+  <circle cx="21" cy="24" r="9" fill="#d6a84f"/>
+  <path d="M18 42c9-19 23-20 31-12-13 1-20 7-23 18-3-1-6-3-8-6Z" fill="#fffaf4"/>
+  <path d="M34 18c8 3 11 9 9 17-7-3-11-9-9-17Z" fill="#c8553d"/>
+</svg>
