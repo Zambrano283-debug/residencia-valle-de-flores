@@ -1,19 +1,47 @@
+/* ============================================================
+   HOJA DE ESTILOS - Residencia Valle de Flores
+   ============================================================
+   Organización del archivo (de arriba hacia abajo):
+   1. Variables de diseño (paleta de colores reutilizable)
+   2. Reset global y estilos base (body, links, imágenes)
+   3. Header + navegación + sección hero
+   4. Secciones generales (nosotros, servicios, misión/visión)
+   5. Actividades (tabs) y galería interactiva
+   6. Formulario de contacto
+   7. Panel de registros (legacy, ya no se usa en el HTML actual)
+   8. Botón flotante de WhatsApp y footer
+   9. Media queries (responsive: tablet y móvil)
+   ============================================================ */
+
+/* ===================================
+   VARIABLES DE DISEÑO (Color Palette)
+   =================================== */
 :root {
-  --leaf: #2d6a4f;
-  --leaf-dark: #1b4332;
-  --rose: #c8553d;
-  --gold: #d6a84f;
-  --sky: #d8edf0;
-  --paper: #fffaf4;
-  --white: #ffffff;
-  --ink: #24312b;
-  --muted: #66736d;
-  --line: rgba(36, 49, 43, 0.14);
-  --shadow: 0 20px 60px rgba(31, 58, 44, 0.16);
+  /* Colores principales - Inspiración en naturaleza y calidez */
+  --leaf: #2d6a4f;           /* Verde hoja - color primario */
+  --leaf-dark: #1b4332;      /* Verde hoja oscuro - acentos */
+  --rose: #c8553d;           /* Rosa/coral - colores de llamada a acción */
+  --gold: #d6a84f;           /* Oro - botones principales */
+  --sky: #d8edf0;            /* Azul cielo claro - fondos suaves */
+  --paper: #fffaf4;          /* Papel/crema - fondo general */
+  --white: #ffffff;          /* Blanco puro */
+  --ink: #24312b;            /* Negro suave - textos */
+  --muted: #66736d;          /* Gris neutro - textos secundarios */
+  --line: rgba(36, 49, 43, 0.14);  /* Líneas divisoras */
+  --shadow: 0 20px 60px rgba(31, 58, 44, 0.16);  /* Sombra sutil */
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+/* ===================================
+   RESET GLOBAL Y ESTILOS BASE
+   =================================== */
+* { 
+  box-sizing: border-box; /* Incluye padding y border en el ancho/alto */
+}
+
+html { 
+  scroll-behavior: smooth; /* Desplazamiento suave al hacer click en anclas */
+}
+
 body {
   margin: 0;
   font-family: Inter, Arial, sans-serif;
@@ -21,11 +49,21 @@ body {
   background: var(--paper);
 }
 
-img { max-width: 100%; display: block; }
-a { color: inherit; }
+img { 
+  max-width: 100%; 
+  display: block; /* Evita espacios en blanco debajo de imágenes */
+}
 
+a { 
+  color: inherit; /* Hereda el color del texto padre */
+}
+
+/* ===================================
+   HEADER Y NAVEGACIÓN
+   =================================== */
 .site-header {
   min-height: 92vh;
+  /* Gradiente oscuro + imagen de fondo para efecto visual */
   background:
     linear-gradient(90deg, rgba(27, 67, 50, 0.9), rgba(45, 106, 79, 0.58), rgba(255, 250, 244, 0.16)),
     url("https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1800&q=80") center/cover;
@@ -34,7 +72,7 @@ a { color: inherit; }
 }
 
 .navbar {
-  width: min(1160px, calc(100% - 32px));
+  width: min(1160px, calc(100% - 32px)); /* Ancho máximo con padding responsivo */
   margin: 0 auto;
   padding: 22px 0;
   display: flex;
@@ -43,14 +81,21 @@ a { color: inherit; }
   gap: 24px;
 }
 
-.brand, .nav-links a { text-decoration: none; }
+.brand, .nav-links a { 
+  text-decoration: none; /* Quita subrayado de enlaces */
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
   gap: 10px;
   font-weight: 800;
 }
-.brand img { border-radius: 12px; }
+
+.brand img { 
+  border-radius: 12px; /* Esquinas redondeadas en logo */
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -58,31 +103,66 @@ a { color: inherit; }
   font-size: 0.94rem;
   font-weight: 700;
 }
-.nav-links a { opacity: 0.92; }
-.nav-links a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 6px; }
 
+.nav-links a { 
+  opacity: 0.92; /* Ligeramente transparente */
+}
+
+.nav-links a:hover { 
+  opacity: 1; 
+  text-decoration: underline; 
+  text-underline-offset: 6px; /* Separa el subrayado del texto */
+}
+
+/* Botón hamburguesa (oculto en desktop, visible en mobile) */
 .menu-toggle {
-  display: none;
+  display: none;  /* Se muestra en media queries */
   width: 44px;
   height: 44px;
   border: 1px solid rgba(255,255,255,0.45);
   background: rgba(255,255,255,0.12);
   border-radius: 8px;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
-.menu-toggle span { display: block; width: 20px; height: 2px; margin: 5px auto; background: white; }
 
+.menu-toggle:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.6);
+}
+
+.menu-toggle:focus {
+  outline: 2px solid rgba(255,255,255,0.8);
+  outline-offset: 2px;
+}
+
+.menu-toggle span { 
+  display: block; 
+  width: 20px; 
+  height: 2px; 
+  margin: 5px auto; 
+  background: white; 
+  transition: all 0.3s ease;
+}
+
+/* ===================================
+   SECCIÓN HERO (Principal)
+   =================================== */
 .hero {
   width: min(1160px, calc(100% - 32px));
   margin: 0 auto;
   min-height: calc(92vh - 86px);
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 340px;
+  grid-template-columns: minmax(0, 1fr) 340px; /* Contenido + panel lateral */
   gap: 32px;
   align-items: center;
   padding-bottom: 70px;
 }
-.hero-content { max-width: 760px; }
+
+.hero-content { 
+  max-width: 760px; /* Limita ancho del contenido */
+}
+
 .eyebrow {
   margin: 0 0 12px;
   color: var(--rose);
@@ -91,25 +171,33 @@ a { color: inherit; }
   letter-spacing: 0;
   font-size: 0.82rem;
 }
-.hero .eyebrow { color: #ffd98a; }
+
+.hero .eyebrow { 
+  color: #ffd98a; /* Color diferente en hero */
+}
+
 h1 {
   margin: 0;
-  font-size: clamp(3rem, 8vw, 6.8rem);
-  line-height: 0.95;
+  font-size: clamp(3rem, 8vw, 6.8rem); /* Responsivo con clamp */
+  line-height: 0.95; /* Compacto para títulos grandes */
   letter-spacing: 0;
 }
+
 .hero-copy {
   max-width: 660px;
   font-size: 1.16rem;
   line-height: 1.7;
   color: rgba(255,255,255,0.92);
 }
+
 .hero-actions, .records-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 28px;
 }
+
+/* Estilos de botones generales */
 .button {
   border: 0;
   border-radius: 8px;
@@ -121,87 +209,221 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.2s ease;
+  outline: none;
 }
-.button:disabled { opacity: 0.55; cursor: not-allowed; }
-.primary { background: var(--gold); color: var(--leaf-dark); }
-.secondary { background: rgba(255,255,255,0.16); color: white; border: 1px solid rgba(255,255,255,0.35); }
-.outline { background: var(--white); color: var(--leaf-dark); border: 1px solid var(--line); }
-.danger { background: #f9e1dc; color: #8a2f1d; border: 1px solid rgba(200, 85, 61, 0.24); }
 
+.button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.button:focus {
+  outline: 2px solid rgba(255,255,255,0.6);
+  outline-offset: 2px;
+}
+
+.button:disabled { 
+  opacity: 0.65; 
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Variantes de botones */
+.primary { 
+  background: var(--gold); 
+  color: var(--leaf-dark);
+}
+
+.primary:focus {
+  outline-color: var(--gold);
+}
+
+.secondary { 
+  background: rgba(255,255,255,0.16); 
+  color: white; 
+  border: 1px solid rgba(255,255,255,0.35);
+}
+
+.secondary:hover:not(:disabled) {
+  background: rgba(255,255,255,0.25);
+  border-color: rgba(255,255,255,0.5);
+}
+
+.outline { 
+  background: var(--white); 
+  color: var(--leaf-dark); 
+  border: 1px solid var(--line);
+}
+
+.outline:hover:not(:disabled) {
+  background: var(--sky);
+}
+
+.danger { 
+  background: #f9e1dc; 
+  color: #8a2f1d; 
+  border: 1px solid rgba(200, 85, 61, 0.24);
+}
+
+.danger:hover:not(:disabled) {
+  background: #f5cfc9;
+}
+
+/* Panel lateral del hero */
 .hero-panel {
   display: grid;
   gap: 12px;
   align-self: end;
   margin-bottom: 70px;
 }
+
 .hero-panel div {
   padding: 18px;
   border-radius: 8px;
-  background: rgba(255,255,255,0.16);
-  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px); /* Efecto glassmorphism */
   border: 1px solid rgba(255,255,255,0.24);
+  transition: all 0.2s ease;
 }
-.hero-panel strong { display: block; font-size: 2rem; color: #ffe3a0; }
-.hero-panel span { color: rgba(255,255,255,0.92); }
 
+.hero-panel div:hover {
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.35);
+}
+
+.hero-panel strong { 
+  display: block; 
+  font-size: 2rem; 
+  color: #ffe3a0;
+}
+
+.hero-panel span { 
+  color: rgba(255,255,255,0.95);
+  font-size: 0.9rem;
+}
+
+/* ===================================
+   SECCIONES GENERALES
+   =================================== */
 .section {
   width: min(1160px, calc(100% - 32px));
   margin: 0 auto;
   padding: 76px 0;
 }
-.section-heading { max-width: 720px; }
-.section-heading.wide { max-width: 880px; }
-h2 { margin: 0; font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1.05; }
-h3 { margin: 0 0 10px; }
+
+.section-heading { 
+  max-width: 720px; 
+}
+
+.section-heading.wide { 
+  max-width: 880px; 
+}
+
+h2 { 
+  margin: 0; 
+  font-size: clamp(2rem, 4vw, 3.4rem); 
+  line-height: 1.05; 
+}
+
+h3 { 
+  margin: 0 0 10px; 
+}
+
+/* Sección Nosotros */
 .intro {
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
+  grid-template-columns: 0.95fr 1.05fr; /* Columnas asimétricas */
   gap: 48px;
   align-items: start;
 }
+
 .intro > p, .contact p, .records .section-heading p:last-child {
   color: var(--muted);
   line-height: 1.8;
   font-size: 1.05rem;
 }
 
-.services, .activities, .team, .contact, .records { border-top: 1px solid var(--line); }
+/* ===================================
+   SERVICIOS Y EQUIPO (Grids)
+   =================================== */
+.services, .activities, .team, .contact, .records { 
+  border-top: 1px solid var(--line); /* Separador visual */
+}
+
 .service-grid, .team-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 columnas responsivas */
   gap: 16px;
   margin-top: 28px;
 }
+
 .service-grid article, .team-grid article, .purpose-card {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 24px;
   background: var(--white);
-  box-shadow: 0 12px 30px rgba(36, 49, 43, 0.06);
+  box-shadow: 0 12px 30px rgba(36, 49, 43, 0.06); /* Sombra sutil */
+  transition: all 0.2s ease;
 }
+
+.service-grid article:hover, .team-grid article:hover, .purpose-card:hover {
+  box-shadow: 0 16px 40px rgba(36, 49, 43, 0.12);
+  transform: translateY(-2px);
+}
+
 .service-grid span {
   display: inline-flex;
   margin-bottom: 18px;
   color: var(--rose);
   font-weight: 900;
 }
+
 .service-grid p, .team-grid p, .purpose-card p {
   margin: 0;
   color: var(--muted);
   line-height: 1.75;
 }
 
+/* ===================================
+   MISIÓN Y VISIÓN
+   =================================== */
 .purpose {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columnas */
   gap: 18px;
 }
-.purpose-card.highlighted { background: var(--leaf); color: white; }
-.purpose-card.highlighted p { color: rgba(255,255,255,0.9); }
-.icon { display: inline-flex; margin-bottom: 14px; color: var(--rose); font-weight: 900; }
-.highlighted .icon { color: #ffd98a; }
 
-.activity-tabs { display: flex; gap: 10px; flex-wrap: wrap; margin: 28px 0 18px; }
+.purpose-card.highlighted { 
+  background: var(--leaf); 
+  color: white; 
+}
+
+.purpose-card.highlighted p { 
+  color: rgba(255,255,255,0.9); 
+}
+
+.icon { 
+  display: inline-flex; 
+  margin-bottom: 14px; 
+  color: var(--rose); 
+  font-weight: 900; 
+}
+
+.highlighted .icon { 
+  color: #ffd98a; 
+}
+
+/* ===================================
+   ACTIVIDADES (Tabs interactivos)
+   =================================== */
+.activity-tabs { 
+  display: flex; 
+  gap: 10px; 
+  flex-wrap: wrap; 
+  margin: 28px 0 18px; 
+}
+
 .tab {
   border: 1px solid var(--line);
   background: var(--white);
@@ -210,11 +432,29 @@ h3 { margin: 0 0 10px; }
   padding: 11px 14px;
   font-weight: 800;
   cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
 }
-.tab.active { background: var(--leaf); color: white; border-color: var(--leaf); }
+
+.tab:hover {
+  background: var(--sky);
+  border-color: var(--leaf);
+}
+
+.tab:focus {
+  outline: 2px solid var(--leaf);
+  outline-offset: 2px;
+}
+
+.tab.active { 
+  background: var(--leaf); 
+  color: white; 
+  border-color: var(--leaf);
+}
+
 .activity-display {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: 0.9fr 1.1fr; /* Imagen + texto */
   gap: 24px;
   align-items: stretch;
   background: var(--white);
@@ -223,21 +463,57 @@ h3 { margin: 0 0 10px; }
   overflow: hidden;
   box-shadow: var(--shadow);
 }
+
 .activity-image {
   min-height: 360px;
-  background: url("https://images.unsplash.com/photo-1593100126453-19b562a800c1?auto=format&fit=crop&w=1000&q=80") center/cover;
+  /* Patrón de cuadros grises (placeholder visible si la imagen no carga)
+     + la imagen inicial del tab "Terapia física" (activo por defecto).
+     El JS (script.js) reemplaza esta propiedad en línea al cambiar de tab. */
+  background-image:
+    linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc),
+    linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc),
+    url("https://images.unsplash.com/photo-1593100126453-19b562a800c1?auto=format&fit=crop&w=1000&q=80");
+  background-size: 20px 20px, 20px 20px, cover;
+  background-position: 0 0, 10px 10px, center;
+  background-repeat: repeat, repeat, no-repeat;
+  background-color: #e8e8e8;
+  /* Corrección: "background-attachment: fixed" hacía que la imagen se
+     posicionara respecto a la ventana del navegador (no respecto a este
+     recuadro), por lo que al hacer scroll se veía la imagen "cortada" o
+     repetida junto con el patrón de cuadros de abajo, dando la sensación
+     de dos imágenes superpuestas en el mismo cuadro. Al quitarlo y fijar
+     background-size: cover + no-repeat, la imagen llena el recuadro de
+     forma estable sin mostrar el patrón de fondo ni duplicarse.
+  */
 }
-.activity-text { padding: 34px; }
-.activity-text h3 { font-size: 2rem; }
-.activity-text p, .activity-text li { color: var(--muted); line-height: 1.75; }
 
-.gallery { padding-top: 28px; }
+.activity-text { 
+  padding: 34px; 
+}
+
+.activity-text h3 { 
+  font-size: 2rem; 
+}
+
+.activity-text p, .activity-text li { 
+  color: var(--muted); 
+  line-height: 1.75; 
+}
+
+/* ===================================
+   GALERÍA
+   =================================== */
+.gallery { 
+  padding-top: 28px; 
+}
+
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 columnas */
   gap: 14px;
   margin-top: 26px;
 }
+
 .gallery-item {
   min-height: 150px;
   border: 0;
@@ -246,26 +522,47 @@ h3 { margin: 0 0 10px; }
   font-weight: 900;
   font-size: 1.05rem;
   cursor: pointer;
-  background: linear-gradient(rgba(27,67,50,0.2), rgba(27,67,50,0.78)), var(--bg) center/cover;
+  /* Gradiente más oscuro + imagen de fondo con CSS variables */
+  background: linear-gradient(135deg, rgba(27,67,50,0.6) 0%, rgba(45,106,79,0.75) 100%), var(--bg) center/cover;
+  transition: all 0.2s ease;
+  outline: none;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.gallery-item:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Imágenes diferentes para cada item de galería */
 .gallery-item:nth-child(1) { --bg: url("https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80"); }
 .gallery-item:nth-child(2) { --bg: url("https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=900&q=80"); }
 .gallery-item:nth-child(3) { --bg: url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80"); }
 .gallery-item:nth-child(4) { --bg: url("https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=900&q=80"); }
+
 .gallery-message {
   margin: 18px 0 0;
   padding: 16px 18px;
-  border-left: 5px solid var(--rose);
+  border-left: 5px solid var(--rose); /* Indicador visual */
   background: var(--white);
   color: var(--muted);
 }
 
+/* ===================================
+   FORMULARIO DE CONTACTO
+   =================================== */
 .contact {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: 0.9fr 1.1fr; /* Texto + formulario */
   gap: 44px;
   align-items: start;
 }
+
 .contact-form {
   display: grid;
   gap: 14px;
@@ -275,7 +572,13 @@ h3 { margin: 0 0 10px; }
   padding: 24px;
   box-shadow: 0 12px 30px rgba(36, 49, 43, 0.06);
 }
-label { display: grid; gap: 8px; font-weight: 800; }
+
+label { 
+  display: grid; 
+  gap: 8px; 
+  font-weight: 800; 
+}
+
 input, textarea, select {
   width: 100%;
   border: 1px solid var(--line);
@@ -284,18 +587,61 @@ input, textarea, select {
   font: inherit;
   color: var(--ink);
   background: #fffdf9;
+  transition: all 0.2s ease;
+  outline: none;
 }
-textarea { resize: vertical; }
-.form-status { margin: 0; color: var(--leaf); font-weight: 800; line-height: 1.5; }
-.form-status.error { color: #8a2f1d; }
 
-.records { padding-top: 56px; }
-.records-actions { margin: 24px 0 18px; }
+input:hover, textarea:hover, select:hover {
+  border-color: var(--leaf);
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--leaf);
+  box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.1);
+}
+
+input:disabled, textarea:disabled, select:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+textarea { 
+  resize: vertical; /* Permite redimensionar solo verticalmente */
+}
+
+.form-status { 
+  margin: 0; 
+  color: var(--leaf); 
+  font-weight: 800; 
+  line-height: 1.5; 
+}
+
+.form-status.error { 
+  color: #8a2f1d; /* Rojo para errores */
+}
+
+/* ===================================
+   REGISTROS (Panel interno - LEGACY/INACTIVO)
+   Nota: el HTML actual ya no incluye estos elementos (#recordsList,
+   .records-table, botones #loadRecords/#exportRecords/#clearRecords).
+   Los estilos se conservan por si se reintroduce un panel de
+   administración (por ejemplo conectado a Supabase en el futuro).
+   =================================== */
+.records { 
+  padding-top: 56px; 
+}
+
+.records-actions { 
+  margin: 24px 0 18px; 
+}
+
 .records-list {
   display: grid;
   gap: 12px;
-  overflow-x: auto;
+  overflow-x: auto; /* Permite scroll horizontal en dispositivos pequeños */
 }
+
 .records-table {
   width: 100%;
   min-width: 760px;
@@ -305,17 +651,20 @@ textarea { resize: vertical; }
   border-radius: 8px;
   overflow: hidden;
 }
+
 .records-table th, .records-table td {
   padding: 14px;
   border-bottom: 1px solid var(--line);
   text-align: left;
   vertical-align: top;
 }
+
 .records-table th {
   background: var(--sky);
   color: var(--leaf-dark);
   font-size: 0.9rem;
 }
+
 .empty-records {
   padding: 18px;
   border: 1px dashed var(--line);
@@ -324,20 +673,48 @@ textarea { resize: vertical; }
   background: var(--white);
 }
 
+/* ===================================
+   BOTÓN WHATSAPP (Flotante)
+   =================================== */
 .whatsapp-button {
   position: fixed;
   right: 18px;
   bottom: 18px;
   z-index: 20;
-  padding: 13px 16px;
+  padding: 12px 16px;
   border-radius: 8px;
-  background: #25d366;
-  color: #083b1f;
+  background: #25d366; /* Verde WhatsApp */
+  color: white;
   font-weight: 900;
   text-decoration: none;
   box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  outline: none;
 }
 
+.whatsapp-button:hover {
+  background: #1ebd59;
+  box-shadow: 0 16px 32px rgba(0,0,0,0.25);
+  transform: translateY(-2px);
+}
+
+.whatsapp-button:focus {
+  outline: 2px solid rgba(255,255,255,0.8);
+  outline-offset: 2px;
+}
+
+.whatsapp-button img {
+  width: 24px;
+  height: 24px;
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
 footer {
   padding: 28px 16px;
   text-align: center;
@@ -345,36 +722,94 @@ footer {
   color: white;
 }
 
+/* ===================================
+   MEDIA QUERIES (Responsive Design)
+   =================================== */
+
+/* Tablets y pantallas medianas (940px y menores) */
 @media (max-width: 940px) {
-  .menu-toggle { display: block; }
+  .menu-toggle { 
+    display: block; /* Muestra menú hamburguesa */
+  }
+  
   .nav-links {
     position: absolute;
     z-index: 10;
     top: 76px;
     left: 16px;
     right: 16px;
-    display: none;
+    display: none; /* Oculto por defecto */
     flex-direction: column;
     align-items: flex-start;
     padding: 18px;
     background: rgba(27,67,50,0.98);
     border-radius: 8px;
   }
-  .nav-links.open { display: flex; }
-  .hero, .intro, .purpose, .activity-display, .contact { grid-template-columns: 1fr; }
-  .service-grid, .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .hero { align-items: end; padding-top: 42px; }
-  .hero-panel { grid-template-columns: repeat(3, 1fr); margin-bottom: 0; }
-  .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  
+  .nav-links.open { 
+    display: flex; /* Mostrar cuando está abierto */
+  }
+  
+  /* Grids adaptados a una columna */
+  .hero, .intro, .purpose, .activity-display, .contact { 
+    grid-template-columns: 1fr; 
+  }
+  
+  .service-grid, .team-grid { 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columnas en lugar de 3 */
+  }
+  
+  .hero { 
+    align-items: end; 
+    padding-top: 42px; 
+  }
+  
+  .hero-panel { 
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas para el panel */
+    margin-bottom: 0; 
+  }
+  
+  .gallery-grid { 
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columnas en lugar de 4 */
+  }
 }
 
+/* Móviles (620px y menores) */
 @media (max-width: 620px) {
-  .site-header { min-height: auto; }
-  .brand span { max-width: 190px; }
-  .hero { min-height: auto; padding-bottom: 36px; }
-  .hero-panel, .service-grid, .team-grid, .gallery-grid { grid-template-columns: 1fr; }
-  .activity-image { min-height: 260px; }
-  .section { padding: 52px 0; }
-  h1 { font-size: 3rem; }
-  .whatsapp-button { left: 16px; right: 16px; text-align: center; }
+  .site-header { 
+    min-height: auto; 
+  }
+  
+  .brand span { 
+    max-width: 190px; /* Limita ancho del logo */
+  }
+  
+  .hero { 
+    min-height: auto; 
+    padding-bottom: 36px; 
+  }
+  
+  /* Todo en una columna */
+  .hero-panel, .service-grid, .team-grid, .gallery-grid { 
+    grid-template-columns: 1fr; 
+  }
+  
+  .activity-image { 
+    min-height: 260px; /* Más compacto en móvil */
+  }
+  
+  .section { 
+    padding: 52px 0; 
+  }
+  
+  h1 { 
+    font-size: 3rem; 
+  }
+  
+  /* WhatsApp button a ancho completo */
+  .whatsapp-button { 
+    left: 16px; 
+    right: 16px; 
+    text-align: center; 
+  }
 }

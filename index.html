@@ -1,30 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- METADATOS Y RECURSOS
+       - Esta sección define el charset, viewport, meta descripción y Open Graph.
+       - También carga la fuente Inter y el archivo CSS principal.
+  -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Residencia Valle de Flores, hogar geriátrico con cuidado integral, actividades terapéuticas y acompañamiento familiar." />
   <meta name="theme-color" content="#2d6a4f" />
+  
+  <!-- Open Graph (mejora cómo se comparte el sitio en redes) -->
   <meta property="og:title" content="Residencia Valle de Flores" />
   <meta property="og:description" content="Hogar geriátrico con bienestar, seguridad y calidez humana." />
   <meta property="og:type" content="website" />
+  
   <title>Residencia Valle de Flores | Hogar geriátrico</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  
+  <!-- Preconnect a Google Fonts para mejorar rendimiento -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Estilos personalizados -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <!-- HEADER Y NAVEGACIÓN PRINCIPAL
+       - Contiene logo, botón de menú (hamburguesa) para mobile y enlaces de navegación.
+       - El header también incluye la sección hero (presentación principal).
+  -->
   <header class="site-header" id="inicio">
     <nav class="navbar" aria-label="Navegación principal">
+      <!-- Logo y marca -->
       <a class="brand" href="#inicio" aria-label="Residencia Valle de Flores, inicio">
+        <!-- Imagen del logo: alt vacío porque el texto de la marca ya describe -->
         <img src="assets/logo.svg" alt="" width="42" height="42" />
         <span>Residencia Valle de Flores</span>
       </a>
+      
+      <!-- Botón menú hamburguesa (se muestra en pantallas pequeñas) -->
       <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+        <!-- Tres spans forman las líneas de la hamburguesa -->
         <span></span><span></span><span></span>
       </button>
+      
+      <!-- Enlaces de navegación (anclas a secciones internas) -->
       <div class="nav-links">
         <a href="#nosotros">Nosotros</a>
         <a href="#servicios">Servicios</a>
@@ -35,16 +57,22 @@
       </div>
     </nav>
 
+    <!-- SECCIÓN HERO - Introducción principal
+         - Texto principal que comunica valor y botones de llamada a la acción.
+         - Panel lateral con métricas/resumen.
+    -->
     <section class="hero">
       <div class="hero-content">
-        <p class="eyebrow">Hogar geriátrico con calidez humana</p>
-        <h1>Residencia Valle de Flores</h1>
+        <p class="eyebrow">Hogar geriátrico con calidez humana</p> <!-- Pequeño rótulo arriba del título -->
+        <h1>Residencia Valle de Flores</h1> <!-- Título principal -->
         <p class="hero-copy">Cuidado integral, acompañamiento cercano y actividades significativas para que cada persona mayor viva con dignidad, seguridad y alegría.</p>
+        <!-- CTA: Agendar visita y ver servicios -->
         <div class="hero-actions">
           <a class="button primary" href="#contacto">Agendar visita</a>
           <a class="button secondary" href="#servicios">Ver servicios</a>
         </div>
       </div>
+      <!-- Panel de información destacada (datos rápidos) -->
       <div class="hero-panel" aria-label="Resumen de bienestar">
         <div><strong>24/7</strong><span>Acompañamiento</span></div>
         <div><strong>2027</strong><span>Proyección humana</span></div>
@@ -53,20 +81,25 @@
     </section>
   </header>
 
+  <!-- CONTENIDO PRINCIPAL -->
   <main>
+    <!-- SECCIÓN NOSOTROS - Presentación general -->
     <section class="section intro" id="nosotros">
       <div class="section-heading">
         <p class="eyebrow">Nuestro hogar</p>
         <h2>Cuidado, compañía y vida cotidiana con sentido</h2>
       </div>
-      <p>Residencia Valle de Flores brinda atención amorosa a los abuelos, promoviendo su autonomía, salud física, memoria, socialización y tranquilidad emocional. Cada jornada combina rutinas de cuidado, actividades terapéuticas y espacios de recreación en un ambiente familiar.</p>
+      <!-- Texto descriptivo: aquí hay un resumen del servicio (puede ampliarse) -->
+      <p>Residencia Valle de Flores brinda atención amorosa a los abuelos, promoviendo su autonomía, salud física, memoria, socialización y tranquilidad emocional. Cada jornada combina rutinas[...]</p>
     </section>
 
+    <!-- SECCIÓN SERVICIOS - Tarjetas con los servicios principales -->
     <section class="section services" id="servicios">
       <div class="section-heading wide">
         <p class="eyebrow">Servicios</p>
         <h2>Atención integral para una vida más tranquila</h2>
       </div>
+      <!-- Grid de 6 servicios (cada article representa una tarjeta) -->
       <div class="service-grid">
         <article><span>01</span><h3>Atención 24/7</h3><p>Acompañamiento permanente, supervisión diaria y apoyo en las rutinas personales.</p></article>
         <article><span>02</span><h3>Alimentación balanceada</h3><p>Menús pensados para el bienestar, la energía y las necesidades de cada residente.</p></article>
@@ -77,32 +110,38 @@
       </div>
     </section>
 
+    <!-- SECCIÓN MISIÓN Y VISIÓN - Propósito institucional 2027 -->
     <section class="section purpose" id="proposito">
+      <!-- Tarjeta Misión -->
       <article class="purpose-card">
         <span class="icon">01</span>
         <h3>Misión 2027</h3>
-        <p>Para el año 2027, ofrecer un servicio geriátrico integral, humano y confiable que fortalezca la calidad de vida de cada residente mediante atención personalizada, terapias preventivas, acompañamiento emocional y participación activa de las familias.</p>
+        <p>Para el año 2027, ofrecer un servicio geriátrico integral, humano y confiable que fortalezca la calidad de vida de cada residente mediante atención personalizada, terapias preventiv[...]</p>
       </article>
+      <!-- Tarjeta Visión (destacada visualmente) -->
       <article class="purpose-card highlighted">
         <span class="icon">02</span>
         <h3>Visión 2027</h3>
-        <p>Ser reconocidos en 2027 como una residencia modelo por su calidez, seguridad, programas de bienestar y compromiso con un envejecimiento digno, activo y lleno de pequeños momentos felices.</p>
+        <p>Ser reconocidos en 2027 como una residencia modelo por su calidez, seguridad, programas de bienestar y compromiso con un envejecimiento digno, activo y lleno de pequeños momentos feli[...]</p>
       </article>
     </section>
 
+    <!-- SECCIÓN ACTIVIDADES - Tabs interactivos -->
     <section class="section activities" id="actividades">
       <div class="section-heading wide">
         <p class="eyebrow">Actividades con los abuelos</p>
         <h2>Rutinas que cuidan cuerpo, mente y corazón</h2>
       </div>
+      <!-- Botones tipo tab: cada uno cambia el contenido mostrado -->
       <div class="activity-tabs" role="tablist" aria-label="Actividades de bienestar">
         <button class="tab active" type="button" data-target="fisica">Terapia física</button>
         <button class="tab" type="button" data-target="cognitiva">Ejercicios cognitivos</button>
         <button class="tab" type="button" data-target="campo">Paseos en el campo</button>
         <button class="tab" type="button" data-target="arte">Arte y música</button>
       </div>
+      <!-- Contenedor dinámico: la imagen y el texto se actualizan por JS -->
       <div class="activity-display">
-        <div class="activity-image" id="activityImage" aria-hidden="true"></div>
+        <div class="activity-image" id="activityImage" aria-hidden="true"></div> <!-- imagen de fondo -->
         <div class="activity-text">
           <h3 id="activityTitle">Terapia física suave</h3>
           <p id="activityDescription">Sesiones guiadas para conservar movilidad, equilibrio y fuerza, adaptadas al ritmo y condición de cada abuelo.</p>
@@ -115,20 +154,24 @@
       </div>
     </section>
 
+    <!-- SECCIÓN GALERÍA - Botones que muestran mensajes -->
     <section class="section gallery">
       <div class="section-heading wide">
         <p class="eyebrow">Ambiente diario</p>
         <h2>Momentos que hacen hogar</h2>
       </div>
+      <!-- Cada botón tiene un data-message que se muestra al hacer click -->
       <div class="gallery-grid">
         <button class="gallery-item" type="button" data-message="Mañanas con movilidad, respiración y rutinas de bienestar.">Bienestar físico</button>
         <button class="gallery-item" type="button" data-message="Juegos de memoria, lectura, rompecabezas y conversaciones guiadas.">Memoria activa</button>
         <button class="gallery-item" type="button" data-message="Celebraciones, música, manualidades y encuentros familiares.">Vida social</button>
         <button class="gallery-item" type="button" data-message="Paseos tranquilos, jardinería y contacto con la naturaleza.">Naturaleza</button>
       </div>
+      <!-- Mensaje actualizado por JS -->
       <p class="gallery-message" id="galleryMessage">Selecciona una actividad para ver un detalle.</p>
     </section>
 
+    <!-- SECCIÓN EQUIPO -->
     <section class="section team" id="equipo">
       <div class="section-heading wide">
         <p class="eyebrow">Equipo humano</p>
@@ -141,16 +184,37 @@
       </div>
     </section>
 
+    <!-- SECCIÓN CONTACTO - Formulario principal -->
     <section class="section contact" id="contacto">
       <div>
         <p class="eyebrow">Contacto</p>
         <h2>Agenda una visita familiar</h2>
         <p>Conoce nuestros espacios, conversa con el equipo y descubre cómo podemos acompañar a tu ser querido con respeto y cercanía.</p>
       </div>
+      <!-- Formulario de contacto.
+           - "novalidate" desactiva los mensajes de error nativos del navegador
+             para que todo el feedback visual lo controle nuestro JS
+             (función validateForm en script.js), y así el mensaje de error
+             se vea consistente con el resto del diseño.
+           - Aun así, dejamos atributos HTML5 (required, pattern, minlength)
+             como una primera capa de validación / accesibilidad.
+      -->
       <form class="contact-form" novalidate>
-        <label>Nombre completo<input type="text" name="nombre" placeholder="Tu nombre" minlength="3" required /></label>
-        <label>Teléfono<input type="tel" name="telefono" placeholder="Ej: 300 123 4567" pattern="[0-9+()\\s-]{7,20}" required /></label>
-        <label>Correo electrónico<input type="email" name="correo" placeholder="correo@ejemplo.com" /></label>
+        <label>Nombre completo
+          <!-- minlength exige al menos 3 caracteres; required impide vacío -->
+          <input type="text" name="nombre" placeholder="Tu nombre" minlength="3" required />
+        </label>
+        <label>Teléfono
+          <!-- pattern: solo permite dígitos, +, paréntesis, espacios y guiones,
+               entre 7 y 20 caracteres. Debe coincidir con el regex usado en
+               validateForm() dentro de script.js para que ambas validaciones
+               sean consistentes. -->
+          <input type="tel" name="telefono" placeholder="Ej: 300 123 4567" pattern="[0-9+()\s-]{7,20}" required />
+        </label>
+        <label>Correo electrónico
+          <!-- Campo opcional: no lleva "required" -->
+          <input type="email" name="correo" placeholder="correo@ejemplo.com" />
+        </label>
         <label>Tipo de consulta
           <select name="consulta" required>
             <option value="">Selecciona una opción</option>
@@ -160,33 +224,45 @@
             <option>Otra consulta</option>
           </select>
         </label>
-        <label>Mensaje<textarea name="mensaje" rows="4" placeholder="Cuéntanos qué necesitas"></textarea></label>
+        <label>Mensaje
+          <textarea name="mensaje" rows="4" placeholder="Cuéntanos qué necesitas"></textarea>
+        </label>
         <button class="button primary" type="submit">Enviar solicitud</button>
+        <!-- Párrafo vacío: script.js escribe aquí el mensaje de éxito o error
+             después de intentar guardar la solicitud. role="status" ayuda a
+             que lectores de pantalla anuncien el cambio automáticamente. -->
         <p class="form-status" role="status"></p>
       </form>
     </section>
 
-    <section class="section records" id="registros">
-      <div class="section-heading wide">
-        <p class="eyebrow">Panel interno</p>
-        <h2>Solicitudes guardadas</h2>
-        <p>Los datos enviados desde este navegador quedan almacenados localmente para revisión durante el desarrollo.</p>
-      </div>
-      <div class="records-actions">
-        <button class="button primary" type="button" id="loadRecords">Ver solicitudes</button>
-        <button class="button outline" type="button" id="exportRecords">Exportar CSV</button>
-        <button class="button danger" type="button" id="clearRecords">Borrar registros</button>
-      </div>
-      <div class="records-list" id="recordsList" aria-live="polite"></div>
-    </section>
+    <!-- NOTA: el panel interno para ver/borrar/exportar solicitudes (que usaba
+         IndexedDB) fue retirado de aquí porque el proyecto está migrando a
+         Supabase como base de datos compartida (ver js/supabase-config.js y
+         SUPABASE_SETUP.md). El CSS de ese panel se mantiene en styles.css
+         por si se vuelve a necesitar, y script.js sigue soportando esos
+         botones de forma segura (no hace nada si no encuentra el elemento). -->
   </main>
 
-  <a class="whatsapp-button" href="https://wa.me/573104459095?text=Hola%2C%20deseo%20informaci%C3%B3n%20sobre%20Residencia%20Valle%20de%20Flores" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">WhatsApp</a>
+  <!-- BOTÓN WHATSAPP (enlace flotante, visible en toda la página)
+       IMPORTANTE: el número en la URL (573104459095) es un número de ejemplo.
+       Antes de publicar el sitio, reemplázalo por el número real de la
+       residencia, en formato internacional sin signos (código país + número).
+       El texto después de "?text=" es el mensaje precargado que verá el
+       usuario al abrir WhatsApp (va codificado con %20 para espacios, etc).
+  -->
+  <a class="whatsapp-button" href="https://wa.me/573104459095?text=Hola%2C%20deseo%20informaci%C3%B3n%20sobre%20Residencia%20Valle%20de%20Flores" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <img src="assets/whatsapp.svg" alt="" width="24" height="24" />
+  </a>
 
+  <!-- FOOTER: pie de página simple con el nombre de la institución -->
   <footer>
     <p>Residencia Valle de Flores - Hogar geriátrico con atención integral y cálida.</p>
   </footer>
 
+  <!-- Script principal (carga al final del body para no bloquear el render).
+       Maneja: menú hamburguesa, tabs de actividades, galería interactiva,
+       formulario de contacto y guardado local en IndexedDB.
+       No usa type="module" porque no es un módulo ES: ver js/script.js. -->
   <script src="js/script.js"></script>
 </body>
 </html>

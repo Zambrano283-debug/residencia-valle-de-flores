@@ -10,7 +10,6 @@ Página web interactiva para presentar el hogar geriátrico **Residencia Valle d
 - Actividades interactivas para los abuelos.
 - Sección de equipo humano.
 - Formulario de contacto con validación.
-- Base de datos local en el navegador con IndexedDB.
 - Panel interno para ver, borrar y exportar solicitudes en CSV.
 - Botón flotante de WhatsApp.
 - Favicon, logo y metadatos básicos para publicación.
