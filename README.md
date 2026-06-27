@@ -10,7 +10,6 @@ Página web interactiva para presentar el hogar geriátrico **Residencia Valle d
 - Actividades interactivas para los abuelos.
 - Sección de equipo humano.
 - Formulario de contacto con validación.
-- Panel interno para ver, borrar y exportar solicitudes en CSV.
 - Botón flotante de WhatsApp.
 - Favicon, logo y metadatos básicos para publicación.
 
@@ -35,6 +34,7 @@ Página web interactiva para presentar el hogar geriátrico **Residencia Valle d
 1. Abre la carpeta en Visual Studio Code.
 2. Abre `index.html`.
 3. Ejecuta la página con Live Server o abre el archivo directamente en el navegador.
+4. https://residencia-valle-de-flores-5y4c.vercel.app/
 
 ## Datos del formulario
 
