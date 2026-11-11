@@ -1,190 +1,254 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Residencia Valle de Flores, hogar geriátrico con cuidado integral, actividades terapéuticas y acompañamiento familiar." />
-  <meta name="theme-color" content="#2d6a4f" />
-  <meta property="og:title" content="Residencia Valle de Flores" />
-  <meta property="og:description" content="Hogar geriátrico con bienestar, seguridad y calidez humana." />
-  <meta property="og:type" content="website" />
-  <title>Residencia Valle de Flores | Hogar geriátrico</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Residencia Valle de Flores - Hogar Geriátrico</title>
+  <meta name="description" content="Cuidado integral y acompañamiento para el adulto mayor.">
+  <meta name="theme-color" content="#2d6a4f">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="site-header" id="inicio">
-    <nav class="navbar" aria-label="Navegación principal">
-      <a class="brand" href="#inicio" aria-label="Residencia Valle de Flores, inicio">
-        <img src="assets/logo.svg" alt="" width="42" height="42" />
+
+  <!-- =========================================
+       ENCABEZADO Y BANNER PRINCIPAL
+       ========================================= -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="#" class="brand">
         <span>Residencia Valle de Flores</span>
       </a>
-      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+      
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
+
       <div class="nav-links">
-        <a href="#nosotros">Nosotros</a>
         <a href="#servicios">Servicios</a>
-        <a href="#proposito">Misión 2027</a>
+        <a href="#mision">Misión 2027</a>
         <a href="#actividades">Actividades</a>
         <a href="#equipo">Equipo</a>
         <a href="#contacto">Contacto</a>
       </div>
     </nav>
 
-    <section class="hero">
+    <div class="hero">
       <div class="hero-content">
-        <p class="eyebrow">Hogar geriátrico con calidez humana</p>
+        <span class="eyebrow">Hogar geriátrico con calidez humana</span>
         <h1>Residencia Valle de Flores</h1>
-        <p class="hero-copy">Cuidado integral, acompañamiento cercano y actividades significativas para que cada persona mayor viva con dignidad, seguridad y alegría.</p>
+        <p class="hero-copy">
+          Cuidado integral, acompañamiento cercano y actividades significativas para que cada persona mayor viva con dignidad, seguridad y alegría.
+        </p>
         <div class="hero-actions">
-          <a class="button primary" href="#contacto">Agendar visita</a>
-          <a class="button secondary" href="#servicios">Ver servicios</a>
+          <a href="#contacto" class="button primary">Agendar visita</a>
+          <a href="#servicios" class="button secondary">Ver servicios</a>
         </div>
       </div>
-      <div class="hero-panel" aria-label="Resumen de bienestar">
-        <div><strong>24/7</strong><span>Acompañamiento</span></div>
-        <div><strong>2027</strong><span>Proyección humana</span></div>
-        <div><strong>+12</strong><span>Actividades semanales</span></div>
+
+      <div class="hero-panel">
+        <div>
+          <strong>24/7</strong>
+          <span>Acompañamiento</span>
+        </div>
+        <div>
+          <strong>2027</strong>
+          <span>Proyección humana</span>
+        </div>
+        <div>
+          <strong>+12</strong>
+          <span>Actividades semanales</span>
+        </div>
       </div>
-    </section>
+    </div>
   </header>
 
-  <main>
-    <section class="section intro" id="nosotros">
-      <div class="section-heading">
-        <p class="eyebrow">Nuestro hogar</p>
-        <h2>Cuidado, compañía y vida cotidiana con sentido</h2>
+  <!-- =========================================
+       SECCIÓN: SERVICIOS
+       ========================================= -->
+  <section class="section services" id="servicios">
+    <div class="section-heading">
+      <span class="eyebrow">Cuidado Integral</span>
+      <h2>Nuestros Servicios</h2>
+      <div class="intro">
+        <p>Brindamos atención personalizada adaptada a las necesidades médicas, físicas y emocionales de cada residente, garantizando su bienestar en todo momento.</p>
       </div>
-      <p>Residencia Valle de Flores brinda atención amorosa a los abuelos, promoviendo su autonomía, salud física, memoria, socialización y tranquilidad emocional. Cada jornada combina rutinas de cuidado, actividades terapéuticas y espacios de recreación en un ambiente familiar.</p>
-    </section>
-
-    <section class="section services" id="servicios">
-      <div class="section-heading wide">
-        <p class="eyebrow">Servicios</p>
-        <h2>Atención integral para una vida más tranquila</h2>
-      </div>
-      <div class="service-grid">
-        <article><span>01</span><h3>Atención 24/7</h3><p>Acompañamiento permanente, supervisión diaria y apoyo en las rutinas personales.</p></article>
-        <article><span>02</span><h3>Alimentación balanceada</h3><p>Menús pensados para el bienestar, la energía y las necesidades de cada residente.</p></article>
-        <article><span>03</span><h3>Terapia física</h3><p>Ejercicios suaves para movilidad, equilibrio, fuerza y prevención de caídas.</p></article>
-        <article><span>04</span><h3>Estimulación cognitiva</h3><p>Actividades de memoria, lenguaje, orientación y conversación guiada.</p></article>
-        <article><span>05</span><h3>Recreación</h3><p>Música, manualidades, lectura, celebraciones y tardes de integración.</p></article>
-        <article><span>06</span><h3>Acompañamiento familiar</h3><p>Comunicación cercana con las familias y visitas en un entorno acogedor.</p></article>
-      </div>
-    </section>
-
-    <section class="section purpose" id="proposito">
-      <article class="purpose-card">
-        <span class="icon">01</span>
-        <h3>Misión 2027</h3>
-        <p>Para el año 2027, ofrecer un servicio geriátrico integral, humano y confiable que fortalezca la calidad de vida de cada residente mediante atención personalizada, terapias preventivas, acompañamiento emocional y participación activa de las familias.</p>
+    </div>
+    
+    <div class="service-grid">
+      <article>
+        <span>Atención médica</span>
+        <h3>Enfermería 24/7</h3>
+        <p>Personal capacitado disponible día y noche para control de medicamentos, signos vitales y asistencia inmediata.</p>
       </article>
-      <article class="purpose-card highlighted">
-        <span class="icon">02</span>
-        <h3>Visión 2027</h3>
-        <p>Ser reconocidos en 2027 como una residencia modelo por su calidez, seguridad, programas de bienestar y compromiso con un envejecimiento digno, activo y lleno de pequeños momentos felices.</p>
+      <article>
+        <span>Nutrición</span>
+        <h3>Alimentación balanceada</h3>
+        <p>Menús diseñados por nutricionistas, adaptados a dietas específicas y preparados con ingredientes frescos.</p>
       </article>
-    </section>
+      <article>
+        <span>Acompañamiento</span>
+        <h3>Apoyo psicológico</h3>
+        <p>Evaluación y seguimiento emocional constante para promover la salud mental y la adaptación al entorno.</p>
+      </article>
+    </div>
+  </section>
 
-    <section class="section activities" id="actividades">
-      <div class="section-heading wide">
-        <p class="eyebrow">Actividades con los abuelos</p>
-        <h2>Rutinas que cuidan cuerpo, mente y corazón</h2>
+  <!-- =========================================
+       SECCIÓN: MISIÓN / PROPÓSITO
+       ========================================= -->
+  <section class="section" id="mision">
+    <div class="section-heading wide">
+      <span class="eyebrow">Nuestra Visión</span>
+      <h2>Misión 2027</h2>
+    </div>
+    
+    <div class="purpose">
+      <div class="purpose-card highlighted">
+        <span class="icon">Visión a futuro</span>
+        <h3>Referentes en cuidado humano</h3>
+        <p>Trabajamos día a día para consolidarnos en 2027 como el hogar geriátrico modelo en la región, destacando por nuestra innovación en terapias de bienestar integral.</p>
       </div>
-      <div class="activity-tabs" role="tablist" aria-label="Actividades de bienestar">
-        <button class="tab active" type="button" data-target="fisica">Terapia física</button>
-        <button class="tab" type="button" data-target="cognitiva">Ejercicios cognitivos</button>
-        <button class="tab" type="button" data-target="campo">Paseos en el campo</button>
-        <button class="tab" type="button" data-target="arte">Arte y música</button>
+      <div class="purpose-card">
+        <span class="icon">Compromiso</span>
+        <h3>Familia extendida</h3>
+        <p>Más que una residencia, construimos un verdadero hogar donde el respeto, la empatía y el amor son los pilares de nuestra convivencia diaria.</p>
       </div>
-      <div class="activity-display">
-        <div class="activity-image" id="activityImage" aria-hidden="true"></div>
-        <div class="activity-text">
-          <h3 id="activityTitle">Terapia física suave</h3>
-          <p id="activityDescription">Sesiones guiadas para conservar movilidad, equilibrio y fuerza, adaptadas al ritmo y condición de cada abuelo.</p>
-          <ul id="activityList">
-            <li>Estiramientos seguros</li>
-            <li>Ejercicios de equilibrio</li>
-            <li>Caminatas acompañadas</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section gallery">
-      <div class="section-heading wide">
-        <p class="eyebrow">Ambiente diario</p>
-        <h2>Momentos que hacen hogar</h2>
-      </div>
-      <div class="gallery-grid">
-        <button class="gallery-item" type="button" data-message="Mañanas con movilidad, respiración y rutinas de bienestar.">Bienestar físico</button>
-        <button class="gallery-item" type="button" data-message="Juegos de memoria, lectura, rompecabezas y conversaciones guiadas.">Memoria activa</button>
-        <button class="gallery-item" type="button" data-message="Celebraciones, música, manualidades y encuentros familiares.">Vida social</button>
-        <button class="gallery-item" type="button" data-message="Paseos tranquilos, jardinería y contacto con la naturaleza.">Naturaleza</button>
-      </div>
-      <p class="gallery-message" id="galleryMessage">Selecciona una actividad para ver un detalle.</p>
-    </section>
+  <!-- =========================================
+       SECCIÓN: ACTIVIDADES INTERACTIVAS
+       ========================================= -->
+  <section class="section activities" id="actividades">
+    <div class="section-heading">
+      <span class="eyebrow">Ambiente Diario</span>
+      <h2>Momentos que hacen hogar</h2>
+    </div>
 
-    <section class="section team" id="equipo">
-      <div class="section-heading wide">
-        <p class="eyebrow">Equipo humano</p>
-        <h2>Personas preparadas para cuidar con respeto</h2>
-      </div>
-      <div class="team-grid">
-        <article><h3>Dirección del hogar</h3><p>Coordina la atención, la comunicación familiar y la calidad del servicio.</p></article>
-        <article><h3>Auxiliares de cuidado</h3><p>Acompañan las rutinas diarias con paciencia, seguridad y trato cercano.</p></article>
-        <article><h3>Apoyo terapéutico</h3><p>Promueve movilidad, memoria, expresión emocional y participación activa.</p></article>
-      </div>
-    </section>
+    <!-- Pestañas con imágenes de fondo -->
+    <div class="activity-tabs">
+      <button class="tab active" data-target="fisica" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('assets/actividad-fisica.jpg');">
+        <span>Bienestar físico</span>
+      </button>
+      
+      <button class="tab" data-target="cognitiva" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('assets/actividad-cognitiva.jpg');">
+        <span>Memoria activa</span>
+      </button>
+      
+      <button class="tab" data-target="arte" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('assets/actividad-arte.jpg');">
+        <span>Vida social</span>
+      </button>
+      
+      <button class="tab" data-target="campo" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('assets/actividad-campo.jpg');">
+        <span>Naturaleza</span>
+      </button>
+    </div>
+    
+    <p class="tab-instruction">Selecciona una actividad para ver un detalle.</p>
 
-    <section class="section contact" id="contacto">
-      <div>
-        <p class="eyebrow">Contacto</p>
-        <h2>Agenda una visita familiar</h2>
-        <p>Conoce nuestros espacios, conversa con el equipo y descubre cómo podemos acompañar a tu ser querido con respeto y cercanía.</p>
+    <!-- Panel Dinámico de JavaScript -->
+    <div class="activity-display">
+      <div class="activity-image" id="activityImage" style="background-image: url('assets/actividad-fisica.jpg');"></div>
+      <div class="activity-text">
+        <h3 id="activityTitle">Terapia física suave</h3>
+        <p id="activityDescription">Sesiones guiadas para conservar movilidad, equilibrio y fuerza, adaptadas al ritmo y condición de cada abuelo.</p>
+        <ul id="activityList">
+          <li>Estiramientos seguros</li>
+          <li>Ejercicios de equilibrio</li>
+          <li>Caminatas acompañadas</li>
+        </ul>
       </div>
-      <form class="contact-form" novalidate>
-        <label>Nombre completo<input type="text" name="nombre" placeholder="Tu nombre" minlength="3" required /></label>
-        <label>Teléfono<input type="tel" name="telefono" placeholder="Ej: 300 123 4567" pattern="[0-9+()\\s-]{7,20}" required /></label>
-        <label>Correo electrónico<input type="email" name="correo" placeholder="correo@ejemplo.com" /></label>
-        <label>Tipo de consulta
-          <select name="consulta" required>
-            <option value="">Selecciona una opción</option>
-            <option>Agendar visita</option>
-            <option>Información de cupos</option>
-            <option>Servicios y tarifas</option>
-            <option>Otra consulta</option>
-          </select>
-        </label>
-        <label>Mensaje<textarea name="mensaje" rows="4" placeholder="Cuéntanos qué necesitas"></textarea></label>
-        <button class="button primary" type="submit">Enviar solicitud</button>
-        <p class="form-status" role="status"></p>
-      </form>
-    </section>
+    </div>
+  </section>
 
-    <section class="section records" id="registros">
-      <div class="section-heading wide">
-        <p class="eyebrow">Panel interno</p>
-        <h2>Solicitudes guardadas</h2>
-        <p>Los datos enviados desde este navegador quedan almacenados localmente para revisión durante el desarrollo.</p>
-      </div>
-      <div class="records-actions">
-        <button class="button primary" type="button" id="loadRecords">Ver solicitudes</button>
-        <button class="button outline" type="button" id="exportRecords">Exportar CSV</button>
-        <button class="button danger" type="button" id="clearRecords">Borrar registros</button>
-      </div>
-      <div class="records-list" id="recordsList" aria-live="polite"></div>
-    </section>
-  </main>
+  <!-- =========================================
+       SECCIÓN: EQUIPO HUMANO
+       ========================================= -->
+  <section class="section" id="equipo">
+    <div class="section-heading">
+      <span class="eyebrow">Equipo Humano</span>
+      <h2>Personas preparadas para cuidar con respeto</h2>
+    </div>
+    
+    <div class="team-grid">
+      <article>
+        <h3>Dirección del hogar</h3>
+        <p>Coordina la atención, la comunicación familiar y la calidad del servicio.</p>
+      </article>
+      <article>
+        <h3>Auxiliares de cuidado</h3>
+        <p>Acompañan las rutinas diarias con paciencia, seguridad y trato cercano.</p>
+      </article>
+      <article>
+        <h3>Apoyo terapéutico</h3>
+        <p>Promueve movilidad, memoria, expresión emocional y participación activa.</p>
+      </article>
+    </div>
+  </section>
 
-  <a class="whatsapp-button" href="https://wa.me/573104459095?text=Hola%2C%20deseo%20informaci%C3%B3n%20sobre%20Residencia%20Valle%20de%20Flores" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">WhatsApp</a>
+  <!-- =========================================
+       SECCIÓN: CONTACTO Y FORMULARIO
+       ========================================= -->
+  <section class="section contact" id="contacto">
+    <div>
+      <span class="eyebrow">Conversemos</span>
+      <h2>Agenda una visita</h2>
+      <p>Estaremos encantados de recibirte, mostrarte nuestras instalaciones y responder todas tus dudas sobre el cuidado de tu ser querido.</p>
+    </div>
 
+    <form class="contact-form">
+      <label>
+        Nombre completo
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+      </label>
+      
+      <label>
+        Teléfono / Celular
+        <input type="tel" name="telefono" placeholder="Ej: 300 123 4567" required>
+      </label>
+
+      <label>
+        Correo electrónico
+        <input type="email" name="correo" placeholder="correo@ejemplo.com">
+      </label>
+
+      <label>
+        Tipo de consulta
+        <select name="consulta" required>
+          <option value="">Selecciona una opción...</option>
+          <option value="visita">Agendar visita</option>
+          <option value="precios">Información de precios</option>
+          <option value="servicios">Detalle de servicios</option>
+          <option value="otro">Otro</option>
+        </select>
+      </label>
+
+      <label>
+        Mensaje adicional
+        <textarea name="mensaje" rows="4" placeholder="Cuéntanos un poco más sobre tus necesidades..."></textarea>
+      </label>
+
+      <button type="submit" class="button primary">Enviar solicitud</button>
+      <p class="form-status"></p>
+    </form>
+  </section>
+
+  <!-- =========================================
+       BOTONES FLOTANTES
+       ========================================= -->
+  <a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" class="whatsapp-button" aria-label="Contactar por WhatsApp">
+    Chatea con nosotros
+  </a>
+
+  <button id="btnVolverArriba" class="btn-volver-arriba" aria-label="Volver al inicio">
+    ↑
+  </button>
+
+  <!-- =========================================
+       PIE DE PÁGINA
+       ========================================= -->
   <footer>
-    <p>Residencia Valle de Flores - Hogar geriátrico con atención integral y cálida.</p>
+    <p>© 2026 Residencia Valle de Flores. Todos los derechos reservados.</p>
   </footer>
 
   <script src="js/script.js"></script>
